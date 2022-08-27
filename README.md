@@ -5,6 +5,7 @@ V-Number
 A normalized frequency parameter, which determines the number of modes of a step-index optical fiber.
 Symbol : V 
 Units: (dimensionless number)")
+
 ![v_number](https://user-images.githubusercontent.com/91258500/187025363-2a8510dc-9bd6-4b5b-b694-470c72bad357.gif)
 
 
