@@ -5,12 +5,12 @@
 
 int menu1(){
     printf("\n**********************************************************************************************************************************************************");
-    printf("\n                                                                NUMERICALS ON OPTICS(MAINLY V-NUMBER)                                                          ");
+    printf("\n                                                            NUMERICALS ON OPTICS(MAINLY V-NUMBER)");
     printf("\n**********************************************************************************************************************************************************");
     printf("\nCHOOSE THE REQUIRED OPTION BELOW KNOWING OTHER PARAMETERS");
     printf("\n\n                 1.To Calculate V-Number");
     printf("\n                 2.To Calculate Number of Modes");
-    printf("\n                 3.To Quit the Program");
+    printf("\n                 3.To Quit the Choice");
     printf("\n**********************************************************************************************************************************************************");
 
     return 0;
@@ -18,11 +18,11 @@ int menu1(){
 
 int menu2(){
     printf("\n**********************************************************************************************************************************************************");
-    printf("\n                                                                NUMERICALS ON THERMAL PROPERTIES(MAINLY THERMAL CONDUCTIVITY)                                                          ");
+    printf("\n                                                            NUMERICALS ON THERMAL PROPERTIES(MAINLY THERMAL CONDUCTIVITY)");
     printf("\n**********************************************************************************************************************************************************");
     printf("\nCHOOSE THE REQUIRED OPTION BELOW KNOWING OTHER PARAMETERS");
     printf("\n\n                 1.To Calculate Thermal Conductivity");
-    printf("\n                 2.To Quit the Program");
+    printf("\n                 2.To Quit the Choice");
     printf("\n**********************************************************************************************************************************************************");
     return 0;
 }
@@ -126,15 +126,15 @@ int main(void)
     while (1)
     {
         printf("\n**********************************************************************************************************************************************************");
-        printf("\n                                                            V-Number AND Thermal Conductivity                                                                  ");
-        printf("\n**********************************************************************************************************************************************************\n");
-        printf("1.Solve QNS on V-Number\n");
+        printf("\n                                                            V-Number AND Thermal Conductivity");
+        printf("\n**********************************************************************************************************************************************************");
+        printf("\n1.Solve QNS on V-Number\n");
         printf("2.Solve QNS on Thermal Conductivity\n");
         printf("3.Quit\n\n");
         printf("Enter your choice : ");
         scanf("%d", &ch);
-        if (ch==1){
-            while (1){
+        while (1){
+            if (ch==1){
                 menu1();
                 int opt;
                 printf("\nEnter your choice: ");
@@ -143,36 +143,30 @@ int main(void)
                 Vno(c);
                 else if (opt==2)
                 M();
-                else if (opt==3){
-                    printf("\n\n*****************************************************THANK YOU*****************************************************");
-                    exit(0);
-                }
+                else if (opt==3)
+                break;
                 else
                 printf("Invalid choice\n");
             }
-        }
-        else if(ch==2){
-            while (1){
+            else if(ch==2){
                 menu2();
                 int opt;
                 printf("\nEnter your choice: ");
                 scanf("%d" , &opt);
                 if (opt==1)
                 Thermal();
-                else if (opt==2){
-                    printf("\n\n*****************************************************THANK YOU*****************************************************");
-                    exit(0);
-                }
+                else if (opt==2)
+                break;
                 else
                 printf("Invalid choice\n");
             }
+            else if(ch==3){        
+                printf("\n*************************************************************************THANK YOU************************************************************************");
+                exit(0);
+            }
+            else
+            printf("Invalid Choice");
         }
-        else if(ch==3){        
-            printf("\n*****************************************************THANK YOU*****************************************************");
-            exit(0);
-        }
-        else
-        printf("Invalid Choice");
     }
     return 0;
 }
