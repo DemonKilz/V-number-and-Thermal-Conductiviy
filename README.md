@@ -18,6 +18,7 @@ For large values, the number of supported modes of a step-index fiber can be cal
 Thermal-Conductiviy
 Definition: The rate at which heat passes through a specified material, expressed as the amount of heat that flows per unit time through a unit area with a temperature gradient of one degree per unit distance is known as thermal conductivity.
 It's unit is kg/m/K.
+
 ![thermal_conductivity](https://user-images.githubusercontent.com/91258500/187025386-66b73d6d-551e-430e-9239-7b1abd1d3365.svg)
 
 Uses:
